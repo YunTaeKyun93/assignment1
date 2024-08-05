@@ -25,12 +25,10 @@ app.get("/", (req, res) => {
   res.send("Hello World!");
 });
 
-// Import routes
 const itemRoutes = require("./routes/todos");
 
 app.use("/api/items", itemRoutes);
 
-// Start the server
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
